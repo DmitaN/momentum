@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+
+<body class="body">
+  <header class="header">
+    <div class="player setting-app-hidden-part">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+        <button class="player-volume-unmute mute player-icon"></button>
+      </div>
+      <div class="player-volume">
+        <input type="range" class="player-volume-level">
+      </div>
+      <p class="player-title-track"></p>
+      <p class="player-time-track"></p>
+      <div class="player-progress progress">
+        <div class="progress-duration">
+          <div class="progress-duration--curent"></div>
+        </div>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="weather setting-app-hidden-part">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time setting-app-hidden-part"></time>
+    <date class="date setting-app-hidden-part"></date>
+    <div class="greeting-container setting-app-hidden-part">
+      <span class="greeting"></span>
+      <input type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-settings-app settings-app">
+      <button class="settings-app-button player-icon"></button>
+      <div class="settings-app-form form">
+        <div class="form-left">
+          <button class="form-general btn btn--active" type="button" data-path="one">General</button>
+          <button class="form-todo btn" type="button" data-path="two">Todo</button>
+          <button class="form-photo btn" type="button" data-path="three">Photo</button>
+          <button class="form-quotos btn" type="button" data-path="four">Quotos</button>
+        </div>
+        <div class="form-right right">
+          <div class="right-general right-block right-block--active" data-target="one">
+            <div class="right-general-languages part">
+              <label class="right-general-label-language label" for="languages">Languages:</label>
+              <select class="right-general-select-language select-settings" name="languages" id="languages">
+                <option value="english">English</option>
+                <option value="russian">Русский</option>
+                <option value="belarus">Беларускі</option>
+              </select>
+            </div>
+            <div class="right-general-show part">
+              <label class="right-general-label-show label" for="show">Show:</label>
+              <ul class="input-show">
+                <li class="input-show-item">
+                  <input type="checkbox" class="right-general-checkbox-show input-time" id="input-time" checked>
+                  <label class="input-show-item-label-time" for="input-time">Time</label>
+                </li>
+                <li class="input-show-item">
+                  <input type="checkbox" class="right-general-checkbox-show input-date" id="input-date" checked>
+                  <label class="input-show-item-label-date" for="input-date">Date</label>
+                </li>
+                <li class="input-show-item">
+                  <input type="checkbox" class="right-general-checkbox-show input-greeting" id="input-greeting" checked>
+                  <label class="input-show-item-label-greeting" for="input-greeting">Greeting</label>
+                </li>
+                <li class="input-show-item">
+                  <input type="checkbox" class="right-general-checkbox-show input-quoto" id="input-quoto" checked>
+                  <label class="input-show-item-label-quoto" for="input-quoto">Quoto</label>
+                </li>
+                <li class="input-show-item">
+                  <input type="checkbox" class="right-general-checkbox-show input-audioplayer" id="input-audioplayer" checked>
+                  <label class="input-show-item-label-audioplayer" for="input-audioplayer">Audioplayer</label>
+                </li>
+                <li class="input-show-item">
+                  <input type="checkbox" class="right-general-checkbox-show input-weather" id="input-weather" checked>
+                  <label class="input-show-item-label-weather" for="input-weather">Weather</label>
+                </li>
+                <li class="input-show-item">
+                  <input type="checkbox" class="right-general-checkbox-show input-todo" id="input-todo" checked>
+                  <label class="input-show-item-label-todo" for="input-todo">Todo</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="right-todo right-block right-block--hidden" data-target="two">
+            <div class="right-todo-div">
+              <label class="right-todo-label">New list:</label>
+              <input type="text" class="right-todo-input" placeholder="type name a new list and press enter for add list">
+              <ul class="right-todo-list">
+
+              </ul>
+            </div>
+          </div>
+          <div class="right-photo right-block right-block--hidden" data-target="three">
+            <div class="right-photo-div-source">
+              <label class="right-photo-label-source" for="source">Source:</label>
+              <select class="right-photo-select-source select-settings" name="source" id="source">
+                <option value="github">Github</option>
+                <option value="unsplash">Unsplash API</option>
+                <option value="flickr">Flickr API</option>
+              </select>
+            </div>
+            <div class="right-photo-div-custom-tag">
+              <div class="right-photo-add-tags">
+                <label for="input-tag" class="right-photo-label-input-tag">Custom tags:</label>
+                <input type="text" class="right-photo-input-name-tag" placeholder="type a new tag and press enter for add tag">
+              </div>
+              <div class="custom-tags">
+
+              </div>
+            </div>
+          </div>
+          <div class="right-quotos right-block right-block--hidden" data-target="four">
+            <div class="right-quotos-div">
+              <label class="right-quotos-label right-quotos-label--font-size">Font size:</label>
+              <input type="number" class="right-quotos-input right-quotos-input-fs" min="10" max="30" value="16" placeholder="min: 10; max 30">
+              <label class="right-quotos-label right-quotos-label--color">Color:</label>
+              <input type="color" class="right-quotos-input right-quotos-input-color" value="#FFFFFF">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-content setting-app-hidden-part">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+
+    <div class="footer-todo todo setting-app-hidden-part">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="https://rs.school/js/" class="footer__link footer__link--image-1" target="_blank"></a>
+        </li>
+        <li class="footer__item">
+          <a href="https://github.com/DmitaN/" class="footer__link footer__link--image-2" target="_blank"></a>
+        </li>
+      </ul>
+      <button class="todo-button player-icon">Todo</button>
+      <div class="todo-form setting-app-hidden-part">
+        <select class="todo-title">
+
+        </select>
+        <ul class="todo-items">
+
+        </ul>
+        <input type="text" class="todo-new-item-title" placeholder="New Todo">
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
